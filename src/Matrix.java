@@ -17,27 +17,27 @@ public class Matrix {
         }
     }
 
-    public void addition(float[][] A, float[][] B) {
+    public void addition(Matrix matrix1, Matrix matrix2) {
         System.out.println("Сложение матриц: ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print((A[i][j] + B[i][j]) + " ");
+                System.out.print((matrix1.matrix_A[i][j] + matrix2.matrix_A[i][j]) + " ");
             }
             System.out.println();
         }
     }
 
-    public void multiply(float[][] A, float num) {
+    public void multiply(Matrix matrix, float num) {
         System.out.println("Умножение матрицы на число " + num + ":");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print((A[i][j] * num) + " ");
+                System.out.print((matrix.matrix_A[i][j] * num) + " ");
             }
             System.out.println();
         }
     }
 
-    public void multiplyMatrix(float[][]matrix1, float[][]matrix2)
+    public void multiplyMatrix(Matrix matrix1, Matrix matrix2)
     {
         System.out.println("Умножение матриц: ");
         float[][]result = new float[rows][columns];
@@ -47,7 +47,7 @@ public class Matrix {
             {
                 for(int k=0;k<rows;k++)
                 {
-                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                    result[i][j] += matrix1.matrix_A[i][k] * matrix2.matrix_A[k][j];
                 }
             }
         }

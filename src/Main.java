@@ -12,17 +12,19 @@ public class Main {
                 {3, 4, 1}
         };
 
-        Matrix matrixClass = new Matrix(matrix2);
+        Matrix matrixClass = new Matrix(matrix1);
+        Matrix matrixClass2 = new Matrix(matrix2);
 
         matrixClass.columns = 3;
         matrixClass.rows = 3;
 
         matrixClass.print();
 
-        matrixClass.addition(matrix1, matrix2);
-        matrixClass.multiply(matrix1, 3);
+        matrixClass.addition(matrixClass, matrixClass2);
+        matrixClass.multiply(matrixClass, 3);
+        matrixClass.multiply(matrixClass2, 3);
 
-        matrixClass.multiplyMatrix(matrix1, matrix2);
+        matrixClass.multiplyMatrix(matrixClass, matrixClass2);
 
     }
 }
