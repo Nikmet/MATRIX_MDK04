@@ -1,13 +1,11 @@
 public class Matrix {
 
-    private int columns;
-    private int rows;
+    public int columns;
+    public int rows;
     private float[][] matrix_A = new float[this.rows][this.columns];
 
-    public Matrix(float[][] matrix, int columns, int rows) {
+    public Matrix(float[][] matrix) {
         this.matrix_A = matrix;
-        this.columns = columns;
-        this.rows = rows;
     }
 
     public void print() {

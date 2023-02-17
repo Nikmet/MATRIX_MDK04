@@ -1,7 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        int columns = 3;
-        int rows = 3;
         float[][] matrix1 = {
                 {1, 2, 3},
                 {2, 1, 4},
@@ -14,7 +12,11 @@ public class Main {
                 {3, 4, 1}
         };
 
-        Matrix matrixClass = new Matrix(matrix2, rows, columns);
+        Matrix matrixClass = new Matrix(matrix2);
+
+        matrixClass.columns = 3;
+        matrixClass.rows = 3;
+
         matrixClass.print();
 
         matrixClass.addition(matrix1, matrix2);
